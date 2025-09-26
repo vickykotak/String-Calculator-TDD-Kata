@@ -1,0 +1,23 @@
+{
+  "name": "string-calculator-tdd-kata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vickykotak/String-Calculator-TDD-Kata.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vickykotak/String-Calculator-TDD-Kata/issues"
+  },
+  "homepage": "https://github.com/vickykotak/String-Calculator-TDD-Kata#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "description": ""
+}
