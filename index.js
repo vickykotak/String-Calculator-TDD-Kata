@@ -2,8 +2,14 @@ function add(str) {
   if (str == "") return 0;
   let sum = 0;
 
-  const parts = str.split("\n");
-  if (parts.length > 0) str = parts.join(",");
+  if (str.startsWith("//")) {
+    const parts = str.split("\n");
+    delimiter = new RegExp(parts[0].slice(2));
+    str = parts[1];
+  } else {
+    const parts = str.split("\n");
+    if (parts.length > 0) str = parts.join(",");
+  }
 
   for (let i = 0; i < str.length; i++) {
     if (!isNaN(str[i])) sum += parseInt(str[i]);
@@ -18,6 +24,7 @@ let testCase = [
   "1,5", //6
   "1,2,3,4", //10
   "1\n2,3", //6
+  "//;\n1;2", //3
 ];
 
 testCase.forEach((str) => console.log(add(str)));
