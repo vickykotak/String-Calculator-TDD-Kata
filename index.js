@@ -25,6 +25,8 @@ function add(str) {
   return sum;
 }
 
+// NOTE: pls comment function call to run test cmd - npm test
+
 let testCase = [
   "", //0
   "1", //1
