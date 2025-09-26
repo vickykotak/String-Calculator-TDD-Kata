@@ -35,3 +35,7 @@ test("throws error listing all negative numbers", () => {
 test("handles multiple numbers", () => {
   expect(add("1,2000,2")).toBe(3);
 });
+
+test("handles length delimiter", () => {
+  expect(add("//[***]\n1***2***3")).toBe(6);
+});
