@@ -15,6 +15,7 @@ function add(str) {
   for (let i = 0; i < numList.length; i++) {
     let num = numList[i];
     if (!isNaN(num) && num < 0) negativeNums.push(num);
+    else if (num > 1000) continue;
     else if (!isNaN(num)) sum += num;
   }
 
@@ -31,6 +32,7 @@ let testCase = [
   "1,2,3,4", //10
   "1\n2,3", //6
   "//;\n1;2", //3
+  "1,2000,2", //3
   "1,-2", //erroor
   "1,-2,-5", //error
 ];

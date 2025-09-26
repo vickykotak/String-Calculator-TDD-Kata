@@ -31,3 +31,7 @@ test("throws error for negative number", () => {
 test("throws error listing all negative numbers", () => {
   expect(() => add("1,-2,-5")).toThrow("negative numbers not allowed -2,-5");
 });
+
+test("handles multiple numbers", () => {
+  expect(add("1,2000,2")).toBe(3);
+});
