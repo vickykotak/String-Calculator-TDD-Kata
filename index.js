@@ -12,7 +12,13 @@ function add(str) {
   }
 
   for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i])) sum += parseInt(str[i]);
+    let flag = 0,
+      num = 0;
+    if (str[i] == "-") flag = 1;
+    else num = parseInt(str[i]);
+    if (flag)
+      throw new Error(`negative numbers not allowed ${str[i] + str[i + 1]}`);
+    else if (!isNaN(num)) sum += num;
   }
 
   return sum;
@@ -25,6 +31,7 @@ let testCase = [
   "1,2,3,4", //10
   "1\n2,3", //6
   "//;\n1;2", //3
+  "1,-2", //erroor
 ];
 
 testCase.forEach((str) => console.log(add(str)));
